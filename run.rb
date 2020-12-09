@@ -27,16 +27,16 @@ def spiciest_foods(spicy_foods)
 end
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine)
-
+  (spicy_foods.find {|food| food[:cuisine]==cuisine})
 end
 
 # BONUS Deliverables
 def print_spiciest_foods(spicy_foods)
-
+  print_spicy_foods(spiciest_foods(spicy_foods))
 end
 
 def average_heat_level(spicy_foods)
-
+  ((spicy_foods.map {|food| food[:heat_level]}).sum)/(spicy_foods.count)
 end
 
 
