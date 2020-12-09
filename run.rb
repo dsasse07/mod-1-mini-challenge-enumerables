@@ -17,7 +17,9 @@ def print_spicy_foods(spicy_foods)
 end
 
 def get_names(spicy_foods)
-
+  spicy_foods.map do |food|
+    food[:name] 
+  end
 end
 
 def spiciest_foods(spicy_foods)
