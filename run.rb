@@ -7,7 +7,13 @@ spicy_foods = [
 ]
 
 def print_spicy_foods(spicy_foods)
-
+  spicy_foods.each do |food|
+    peppers = ""
+    food[:heat_level].times do
+      peppers += "\u{1F336}\u{FE0F} "
+    end
+    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{peppers}"
+  end
 end
 
 def get_names(spicy_foods)
@@ -30,6 +36,7 @@ end
 def average_heat_level(spicy_foods)
 
 end
+
 
 # Use this to test your methods
 # run "ruby run.rb" and try calling the methods from the console
