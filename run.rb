@@ -23,7 +23,7 @@ def get_names(spicy_foods)
 end
 
 def spiciest_foods(spicy_foods)
-
+  spicy_foods.select {|food| food[:heat_level] > 5}
 end
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine)
